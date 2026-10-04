@@ -14,6 +14,25 @@ The project has two parts. In **Part 1**, I cleaned the raw data by handling mis
 
 The Part 2 report is zipped because the original HTML (115,536 KB) exceeds GitHub's file size limit. Download it, unzip it, and open the HTML in a browser.
 
+## Dataset
+- **Size:** 1696381 rows × 69 columns
+  
+## Methodology
+1. Domain research: reviewed how Chicago real estate data is structured and which variables matter.
+2. Data Cleaning:
+- Handling the NaN values:
+  - Checked the NaN values of all columns.
+  - Dropped the columns with > 75% NaN values.
+  - Dropped rows with missing unique indentifiers.
+  - Examined the relationships between related variables using correlation matrix, boxplots, and scatter plots.
+  - Filled missing values in related columns using group averages.
+- Handling outliers:
+  - Used boxplots to find extreme values in each column.
+  - Replaced outliers with median values.
+  - Compared boxplots before and after cleaning.
+3. Exploratory analysis: an interactive Folium choropleth map of price by ZIP code.
+4. Modeling: Linear, Ridge Regression, Decision Tree, Light Random Forest
+5. Evaluation: R-squared and RMSE on [test set / cross-validation], feature-importance analysis.
 
 ## Key Results
 
@@ -50,28 +69,6 @@ The Part 2 report is zipped because the original HTML (115,536 KB) exceeds GitHu
 **Investment & Future Projections**
 -Best areas for appreciation: Hyde Park, Bronzeville, and South Loop due to upcoming infrastructure projects.
 - Best for affordability: Garfield Park and Austin offer the lowest price per square foot, making them prime for entry-level buyers and investors.
-  
-
-## Dataset
-- **Size:** 1696381 rows × 69 columns
-  
-
-## Methodology
-1. Domain research: reviewed how Chicago real estate data is structured and which variables matter.
-2. Data Cleaning:
-- Handling the NaN values:
-  - Checked the NaN values of all columns.
-  - Dropped the columns with > 75% NaN values.
-  - Dropped rows with missing unique indentifiers.
-  - Examined the relationships between related variables using correlation matrix, boxplots, and scatter plots.
-  - Filled missing values in related columns using group averages.
-- Handling outliers:
-  - Used boxplots to find extreme values in each column.
-  - Replaced outliers with median values.
-  - Compared boxplots before and after cleaning.
-3. Exploratory analysis: an interactive Folium choropleth map of price by ZIP code.
-4. Modeling: Linear, Ridge Regression, Decision Tree, Light Random Forest
-5. Evaluation: R-squared and RMSE on [test set / cross-validation], feature-importance analysis.
 
 ## Limitations
 - list_price dominates the Decision Tree, so the best score likely overstates generalization.
