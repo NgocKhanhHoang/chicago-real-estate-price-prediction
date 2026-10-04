@@ -1,11 +1,10 @@
 # Chicago Real Estate Price Prediction 
 ---
 ## Project Overview
-This project analyzes a large real-world dataset of historical Chicago property records (about 1.7 million rows and 69 columns) to understand what drives home prices across the city and to predict them with machine learning.
+This project analyzes a large real-world dataset of historical Chicago property records (about 1.7 million rows and 69 columns) to understand what drives home prices across the city and to predict them with machine learning. The analysis could help home buyers, sellers, and analysis see how location, property size, and age relate to price.
 
-The work has two parts. In **Part 1**, I cleaned the raw data by handling missing values, removing unreliable columns, and treating outliers. In **Part 2**, I explored price patterns by ZIP code and neighborhood, then compared four regression models: Linear Regression, Ridge Regression, Decision Tree, and Light Random Forest.
+The project has two parts. In **Part 1**, I cleaned the raw data by handling missing values, removing unreliable columns, and treating outliers. In **Part 2**, I explored price patterns by ZIP code and neighborhood, then compared four regression models: Linear Regression, Ridge Regression, Decision Tree, and Light Random Forest. 
 
-The Decision Tree achieved the highest score (R² = 0.749), but feature-importance analysis showed it relied almost entirely on `list_price`, so the result likely overstates its real predictive power. The analysis could help home buyers, sellers, and analysts see how location, property size, and age relate to price.
 ---
 ## Code and Reports 
 | Part | Code | Report |
